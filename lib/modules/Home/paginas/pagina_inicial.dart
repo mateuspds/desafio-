@@ -59,8 +59,13 @@ class _PaginaInicialState extends State<PaginaInicial> {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  // Navigator.of(context)
-                  //     .pushReplacementNamed(QuestionarioWidget());
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          QuestionarioWidget(q: questionario.questionario!),
+                    ),
+                  );
                 },
                 child: const Text("Começar"),
               ),
