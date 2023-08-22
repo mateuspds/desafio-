@@ -19,6 +19,7 @@ class _QuestionarioWidgetState extends State<QuestionarioWidget> {
   late Questionario q = widget.q;
   int index = 0;
   int pontuacao = 0;
+  List<int> respostas = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,19 +33,22 @@ class _QuestionarioWidgetState extends State<QuestionarioWidget> {
             texto: q.perguntas[index].pergunta,
           ),
           Resposta(
-            q.perguntas[index].altenativas,
-            (e) {
+            texto: q.perguntas[index].altenativas,
+            quandoSelecionado: (e) {
+              respostas.add(e);
+              if (e == q.perguntas[index].gabarito) {
+                pontuacao++;
+              }
               if (q.perguntas.length - 1 > index) {
                 setState(() {
                   index++;
                 });
-              } else if (e == q.perguntas[index].gabarito) {
-                pontuacao++;
               } else {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => Pontuacao(
+                      resp: respostas,
                       pontos: pontuacao,
                       totalQuestoes: q.perguntas.length,
                     ),

@@ -4,14 +4,18 @@ import 'package:flutter/material.dart';
 class Resposta extends StatelessWidget {
   final List<Alternativas> texto;
   final Function(int) quandoSelecionado;
-
-  const Resposta(this.texto, this.quandoSelecionado, {super.key});
+  const Resposta(
+      {super.key,
+      required this.texto,
+      required this.quandoSelecionado,
+      this.resp});
+  final List<int>? resp;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        for (var item in texto)
+        for (int i = 0; i < texto.length; i++)
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
@@ -19,10 +23,10 @@ class Resposta extends StatelessWidget {
                 backgroundColor: Colors.blue,
               ),
               onPressed: () {
-                quandoSelecionado(item.id);
+                quandoSelecionado(texto[i].id);
               },
               child: Text(
-                item.titulo,
+                texto[i].titulo,
                 style: const TextStyle(
                   color: Colors.white,
                 ),

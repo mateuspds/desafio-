@@ -4,8 +4,12 @@ import 'package:flutter/material.dart';
 class Pontuacao extends StatelessWidget {
   final int pontos;
   final int totalQuestoes;
+  final List<int> resp;
   const Pontuacao(
-      {super.key, required this.pontos, required this.totalQuestoes});
+      {super.key,
+      required this.pontos,
+      required this.totalQuestoes,
+      required this.resp});
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +18,9 @@ class Pontuacao extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Center(
-            child: Text("parabens sua pontuação foi de 10 pontos"),
+            child: Text("parabens sua pontuação foi de "),
           ),
-          Text("${pontos.toString()}/${totalQuestoes.toString()}"),
+          Text("${pontos.toString()}/${totalQuestoes.toString()} pontos"),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
