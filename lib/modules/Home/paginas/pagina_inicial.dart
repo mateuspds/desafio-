@@ -1,7 +1,8 @@
 import 'package:desafio/models/perguntas.dart';
+import 'package:desafio/modules/Home/paginas/init_questionario.dart';
 import 'package:flutter/material.dart';
 
-import '../../repositorios/questionario_repository.dart';
+import '../../../repositorios/questionario_repository.dart';
 
 class PaginaInicial extends StatefulWidget {
   const PaginaInicial({super.key});
@@ -57,7 +58,10 @@ class _PaginaInicialState extends State<PaginaInicial> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  // Navigator.of(context)
+                  //     .pushReplacementNamed(QuestionarioWidget());
+                },
                 child: const Text("Começar"),
               ),
             ],

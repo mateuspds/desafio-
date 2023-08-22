@@ -1,4 +1,4 @@
-import 'package:desafio/modules/Home/pagina_inicial.dart';
+import 'package:desafio/modules/Home/paginas/pagina_inicial.dart';
 import 'package:flutter/material.dart';
 
 void main() {

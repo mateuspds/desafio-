@@ -1,4 +1,4 @@
-var perguntas = {
+Map<String, dynamic> perguntas = {
   "questionario": {
     "id": 1,
     "titulo": "Natureza brasileira",
@@ -9,10 +9,22 @@ var perguntas = {
         "pergunta": "Qual o nome da maior floresta brasileira?",
         "gabarito": 4,
         "alternativas": [
-          {"id": 1, "titulo": "Caatinga"},
-          {"id": 2, "titulo": "Cerrado"},
-          {"id": 3, "titulo": "Mata Atlântica"},
-          {"id": 4, "titulo": "Amazônica"}
+          {
+            "id": 1,
+            "titulo": "Caatinga",
+          },
+          {
+            "id": 2,
+            "titulo": "Cerrado",
+          },
+          {
+            "id": 3,
+            "titulo": "Mata Atlântica",
+          },
+          {
+            "id": 4,
+            "titulo": "Amazônica",
+          }
         ]
       },
       {
@@ -21,10 +33,22 @@ var perguntas = {
         "pergunta": "Qual estado tem a maior faixa litorânea?",
         "gabarito": 3,
         "alternativas": [
-          {"id": 1, "titulo": "São Paulo"},
-          {"id": 2, "titulo": "Maranhão"},
-          {"id": 3, "titulo": "Bahia"},
-          {"id": 4, "titulo": "Rio de Janeiro"}
+          {
+            "id": 1,
+            "titulo": "São Paulo",
+          },
+          {
+            "id": 2,
+            "titulo": "Maranhão",
+          },
+          {
+            "id": 3,
+            "titulo": "Bahia",
+          },
+          {
+            "id": 4,
+            "titulo": "Rio de Janeiro",
+          }
         ]
       }
     ]
