@@ -8,8 +8,10 @@ class Resposta extends StatelessWidget {
       {super.key,
       required this.texto,
       required this.quandoSelecionado,
-      this.resp});
-  final List<int>? resp;
+      this.cor,
+      this.alternativa});
+  final Color? cor;
+  final int? alternativa;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class Resposta extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                backgroundColor: alternativa == texto[i].id ? cor : Colors.blue,
               ),
               onPressed: () {
                 quandoSelecionado(texto[i].id);
